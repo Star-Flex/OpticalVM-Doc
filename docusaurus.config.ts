@@ -10,7 +10,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // 在此处设置您网站的生产 URL
-  url: 'https://doc.passnat.com',
+  url: 'https://docs.opticalvm.com',
   // 设置您的网站所在的 /<baseUrl>/ 路径
   // 对于 GitHub pages 部署，通常是 '/<projectName>/'
   baseUrl: '/',
@@ -40,7 +40,7 @@ const config: Config = {
           // 请更改为您的仓库
           // 删除此项以移除 "编辑此页面" 链接
           editUrl:
-            'https://github.com/Star-Flex/PassNAT-Doc',
+            'https://github.com/Star-Flex/Opticalvm-Doc',
             routeBasePath: '/',
         },
         blog: false,
@@ -69,7 +69,7 @@ const config: Config = {
           label: '文档',
         },
         {
-          href: 'https://github.com/Star-Flex/PassNAT-Doc',
+          href: 'https://github.com/Star-Flex/Opticalvm-Doc',
           label: 'GitHub',
           position: 'right',
         },
@@ -101,14 +101,14 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/Star-Flex/PassNAT-Doc',
+              href: 'https://github.com/Star-Flex/Opticalvm-Doc',
             },
           ],
         },
       ],
       copyright: `<div style="display: flex; flex-direction: column; align-items : center;">
-        <div>Copyright © ${new Date().getFullYear()} PassNat, Inc. Built with Docusaurus.</div>
-        <a href="https://beian.miit.gov.cn" target="_blank">浙 ICP 备2022019220号 -3</a>
+        <div>Copyright © ${new Date().getFullYear()} OpticalVM, Inc. Built with Docusaurus.</div>
+        <a href="https://beian.miit.gov.cn" target="_blank">浙 ICP 备2022019220号</a>
       </div>`,
     },
     prism: {
