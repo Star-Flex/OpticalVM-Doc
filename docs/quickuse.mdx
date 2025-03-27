@@ -1,0 +1,49 @@
+---
+sidebar_position: 1
+---
+
+import select_options from '../static/img/buy/select_options.png'
+import login_page from '../static/img/buy/login_page.png'
+import pay_page from '../static/img/buy/pay_page.png'
+import dash_index from '../static/img/buy/dash_index.png'
+
+# 快速入门
+
+## 如何购买服务器
+<!-- 前往 [服务器选配页](https://www.opticalvm.com/products/cloud-server/buy) 选择你需要的服务器，如果未登录的话，请点击网站右上角 `登录控制台` 跳转到 [认证中心](https://sso.opticalvm.com) 进行登录，如果没有账号的话，请在 **认证中心** 注册一个账号，**认证中心** 作用请看[首页-文档专业名词解释](/#文档专业名词解释)，登录时如果你绑定了totp，那么你还需要二次验证，待验证完毕后将会为你重定向至刚才的选配页面，到这里的时候你就可以继续下单你所想要购买的服务器， -->
+### 前往 [服务器选配页](https://www.opticalvm.com/products/cloud-server/buy) 选择你需要的服务器
+在这里你可以选择你所需要的服务器，选择之后点击 `立即购买` 即可。
+<img src={select_options} alt="select" />
+
+### 如果购买时未登录
+需要你自行点击右上角 `登录控制台` 或者 `立即购买` 都将会为你跳转至 [认证中心](https://sso.opticalvm.com)，**认证中心** 详细作用请查看 [首页-文档专业名词解释](/#文档专业名词解释)，在登录时，如果你绑定了 TOTP，那么你还需要二次验证，待验证完毕后将会为你重定向至刚才的选配页面
+<img src={login_page} alt="login_page"/>
+
+### 购买成功后
+当你下单成功后，将会为你跳转至 `支付页面`，在这里选择你要支付的方式，然后进行支付即可，当支付成功后，将会为你跳转至 [控制台](https://dash.opticalvm.com)
+<img src={pay_page} alt="pay_page"/>
+
+### 购买完成,找不到云服务器列表入口
+如果购买后不知道在哪里查看自己的云服务器，请前往 [查看我的服务器](https://dash.opticalvm.com/ecs)
+
+### 结尾小知识
+- 购买服务器就去 [首页](https://www.opticalvm.com)
+- 账号登录/账号注册就去 [认证中心](https://sso.opticalvm.com)
+- 管理服务器就去 [控制台](https://dash.opticalvm.com)
+
+## 如何连接远程服务器
+
+### 通过 RDP 连接 Windows 服务器
+首先在云服务器详情页面点击 `映射端口` 按钮，在弹出的弹框中找到 `内网端口` 填写 `3389`, `公网端口` 按自己的想法填写，传输协议选择 `TCP`，点击确定，然后点击 `防火墙`，查看 `内网连接IP` 中对应的 `3389` 端口的 `公网连接IP`。
+现在开始连接远程桌面，使用 Win + R 然后输入 cmd 命令 `mstsc` 打开远程桌面连接，输入刚才拿到的 `公网连接IP`，然后点击左下角 `更多选项`，在弹出的窗口中的用户名输入框中输入 `Administrator`，密码输入框中输入刚才设置的密码，点击确定，即可连接远程桌面。
+
+### 连接 Windows 服务器图片演示
+![ECS](/img/ecs.png)
+![ecs_add_port](/img/ecs_add_port.png)
+![view_port_list](/img/view_port_list.png)
+![input_ip](/img/input_ip.png)
+![submit_connect](/img/submit_connect.png)
+
+### 通过 SSH 连接 Linux 服务器
+首先在云服务器详情页面点击 `映射端口` 按钮，在弹出的弹框中找到 `内网端口` 填写 `22`, `公网端口` 按自己的想法填写，传输协议选择 `TCP`，点击确定，然后点击 `防火墙`，查看 `内网连接IP` 中对应的 `22` 端口的 `公网连接IP`。
+然后在打开的 cmd 终端中输入 `ssh root@公网连接IP`，然后输入密码，即可连接远程服务器。

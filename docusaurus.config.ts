@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Opticalvm 文档中心',
   tagline: '你想知道的都在这里',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.svg',
 
   // 在此处设置您网站的生产 URL
   url: 'https://docs.opticalvm.com',
