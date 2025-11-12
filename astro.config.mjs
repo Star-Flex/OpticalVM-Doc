@@ -11,13 +11,6 @@ export default defineConfig({
       logo: {
         src: "./src/assets/icon.svg",
       },
-      // social: [
-      //   {
-      //     icon: "github",
-      //     label: "GitHub",
-      //     href: "https://github.com/Star-Flex/Opticalvm-Doc",
-      //   },
-      // ],
       components: {
         // 使用自定义社交图标组件
         SocialIcons: "./src/components/CustomSocialIcons.astro",
@@ -36,19 +29,24 @@ export default defineConfig({
         baseUrl: "https://github.com/Star-Flex/OpticalVM-Doc/edit/main/",
       },
       lastUpdated: true,
-      // sidebar: [
-      //   {
-      //     label: "Guides",
-      //     items: [
-      //       // Each item here is one entry in the navigation menu.
-      //       { label: "Example Guide", slug: "guides/example" },
-      //     ],
-      //   },
-      //   {
-      //     label: "Reference",
-      //     autogenerate: { directory: "reference" },
-      //   },
-      // ],
+      sidebar: [
+        {
+          label: "云服务器 ",
+          // items: [{ label: "选型指南", slug: "ecs/type-selection" }],
+          autogenerate: { directory: "ecs" },
+        },
+        // {
+        //   label: "Guides",
+        //   items: [
+        //     // Each item here is one entry in the navigation menu.
+        //     { label: "Example Guide", slug: "guides/example" },
+        //   ],
+        // },
+        // {
+        //   label: "Reference",
+        //   autogenerate: { directory: "reference" },
+        // },
+      ],
     }),
   ],
 });
