@@ -4,19 +4,24 @@ import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://docs.opticalvm.com",
   integrations: [
     starlight({
       title: "Opticalvm Docs",
       logo: {
         src: "./src/assets/icon.svg",
       },
-      social: [
-        {
-          icon: "github",
-          label: "GitHub",
-          href: "https://github.com/Star-Flex/Opticalvm-Doc",
-        },
-      ],
+      // social: [
+      //   {
+      //     icon: "github",
+      //     label: "GitHub",
+      //     href: "https://github.com/Star-Flex/Opticalvm-Doc",
+      //   },
+      // ],
+      components: {
+        // 使用自定义社交图标组件
+        SocialIcons: "./src/components/CustomSocialIcons.astro",
+      },
       locales: {
         root: {
           label: "简体中文",

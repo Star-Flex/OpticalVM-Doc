@@ -1,0 +1,65 @@
+---
+// 自定义社交图标组件 - 使用本地 SVG 文件
+import GitHubIcon from "../assets/github-fill.svg?raw";
+import QQIcon from "../assets/qq-line.svg?raw";
+
+// 定义社交链接
+const socialLinks = [
+  {
+    name: "QQ",
+    url: "https://qm.qq.com/q/Csx5PyBDDq",
+    svg: QQIcon,
+  },
+  {
+    name: "GitHub",
+    url: "https://github.com/Star-Flex/Opticalvm-Doc",
+    svg: GitHubIcon,
+  },
+];
+---
+
+<div class="sl-flex social-icons">
+  {
+    socialLinks.map(link => (
+      <a
+        href={link.url}
+        rel="me"
+        class="sl-flex"
+        target="_blank"
+        aria-label={link.name}
+      >
+        <span class="icon" set:html={link.svg} />
+      </a>
+    ))
+  }
+</div>
+
+<style>
+  .social-icons {
+    gap: 1rem;
+    font-size: var(--sl-text-base);
+  }
+
+  .social-icons a {
+    display: flex;
+    align-items: center;
+    color: var(--sl-color-gray-1);
+    transition: color 0.2s;
+  }
+
+  .social-icons a:hover {
+    color: var(--sl-color-text-accent);
+  }
+
+  .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon :global(svg) {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+  }
+</style>
