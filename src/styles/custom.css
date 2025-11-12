@@ -1,0 +1,5 @@
+/* 自定义 Starlight 样式 */
+:root {
+  /* 修改标题和链接的强调色 */
+  --sl-color-text-accent: #1677ff; /* 蓝色 - 可以改成你想要的颜色 */
+}
