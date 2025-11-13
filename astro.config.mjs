@@ -47,9 +47,15 @@ export default defineConfig({
           slug: "index",
         },
         {
-          label: "云服务器 ",
-          // items: [{ label: "选型指南", slug: "ecs/type-selection" }],
-          autogenerate: { directory: "ecs" },
+          label: "云服务器",
+          items: [
+            { label: "选型指南", slug: "ecs/select" },
+            { label: "远程连接", slug: "ecs/connect" },
+            {
+              label: "基础操作",
+              autogenerate: { directory: "ecs/control" },
+            },
+          ],
         },
         // {
         //   label: "Guides",

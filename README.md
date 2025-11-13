@@ -1,49 +1,43 @@
-# Starlight Starter Kit: Basics
+# 如何启动项目
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+### 使用 bun
 
-```
-bun create astro@latest -- --template starlight
-```
+```bash
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+bun i //安装依赖
 
-## 🚀 Project Structure
-
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+bun run dev //启动项目
 
 ```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+
+### 一些约定
+
+文章存储在 src/content/docs 路径，请使用 `mdx` 进行编写
+
+1. 中文与英文之间使用空格分割，例如
+
+```
+苹果 Apple 很好吃
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+2. 文字中出现超链接需要用空格分离，例如
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+```
+本文档项目 Star-Flex/opticalvm-doc 是开源项目，任何人都可以进行编写。只需要点击文章底部的按钮提交 pr
+```
 
-Static assets, like favicons, can be placed in the `public/` directory.
+3. 在比较长的段落里，尽量不使用 有序排列 来布局文字与格局。
 
-## 🧞 Commands
+```markdown
+1. 222
+2. 333
+3. 555
 
-All commands are run from the root of the project, from a terminal:
+你应该使用
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+### 222
 
-## 👀 Want to learn more?
+### 333
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+### 555
+```
