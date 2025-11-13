@@ -31,6 +31,10 @@ export default defineConfig({
       lastUpdated: true,
       sidebar: [
         {
+          label: "云服务器",
+          slug: "index",
+        },
+        {
           label: "云服务器 ",
           // items: [{ label: "选型指南", slug: "ecs/type-selection" }],
           autogenerate: { directory: "ecs" },
