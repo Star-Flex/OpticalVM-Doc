@@ -1,6 +1,9 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import starlightImageZoom from "starlight-image-zoom";
+import starlightScrollToTop from "starlight-scroll-to-top";
+import starlightLlmsTxt from "starlight-llms-txt";
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,6 +14,15 @@ export default defineConfig({
       logo: {
         src: "./src/assets/icon.svg",
       },
+      plugins: [
+        starlightImageZoom(),
+        starlightLlmsTxt(),
+        starlightScrollToTop({
+          smoothScroll: true,
+          // showProgressRing: true,
+          borderRadius: "50",
+        }),
+      ],
       components: {
         // 使用自定义社交图标组件
         SocialIcons: "./src/components/CustomSocialIcons.astro",
@@ -31,7 +43,7 @@ export default defineConfig({
       lastUpdated: true,
       sidebar: [
         {
-          label: "云服务器",
+          label: "OpticalVM 文档",
           slug: "index",
         },
         {
