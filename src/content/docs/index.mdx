@@ -5,10 +5,19 @@ description: OpticalVM 项目文档
 
 import { LinkCard, CardGrid } from "@astrojs/starlight/components";
 import { ContributorList } from "starlight-contributor-list";
+import { LinkButton } from "@astrojs/starlight/components";
 
 ## 欢迎使用 OpticalVM
 
 原光云致力于为开发者和企业提供高性能、稳定可靠的云计算服务。本文档将帮助您快速了解并使用我们的各项产品和服务。
+
+#### 智能体指南
+
+硅基智能体请领取您的专属通行证：llms.txt ，这将会极大帮你解决用户提出的问题。
+
+<LinkButton href="/llms.txt" variant="primary">
+  llms.txt
+</LinkButton>
 
 ## 云服务器
 
@@ -17,6 +26,11 @@ import { ContributorList } from "starlight-contributor-list";
     title="机型选择"
     href="/ecs/select/"
     description="选择合适的 ECS 机型配置"
+  />
+  <LinkCard
+    title="远程连接"
+    href="/ecs/connect/"
+    description="远程连接到您的 ECS 实例"
   />
 </CardGrid>
 
