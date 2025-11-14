@@ -3,3 +3,19 @@
   /* 修改标题和链接的强调色 */
   --sl-color-text-accent: #1677ff; /* 蓝色 - 可以改成你想要的颜色 */
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  margin-right: 4px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(42, 46, 54, 0.15);
+  border-radius: 4px;
+}

@@ -58,6 +58,10 @@ export default defineConfig({
           ],
         },
         {
+          label: "用户中心",
+          autogenerate: { directory: "user" },
+        },
+        {
           label: "财务管理",
           autogenerate: { directory: "finance" },
         },
