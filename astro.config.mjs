@@ -62,6 +62,10 @@ export default defineConfig({
           autogenerate: { directory: "user" },
         },
         {
+          label: "代理返利",
+          autogenerate: { directory: "rebate" },
+        },
+        {
           label: "财务管理",
           autogenerate: { directory: "finance" },
         },
