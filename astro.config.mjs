@@ -57,6 +57,10 @@ export default defineConfig({
             },
           ],
         },
+        {
+          label: "财务管理",
+          autogenerate: { directory: "finance" },
+        },
         // {
         //   label: "Guides",
         //   items: [

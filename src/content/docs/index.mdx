@@ -23,14 +23,29 @@ import { LinkButton } from "@astrojs/starlight/components";
 
 <CardGrid>
   <LinkCard
-    title="机型选择"
+    title="选型指南"
     href="/ecs/select/"
-    description="选择合适的 ECS 机型配置"
+    description="选择合适的 ECS 实例配置和机型"
   />
   <LinkCard
     title="远程连接"
     href="/ecs/connect/"
-    description="远程连接到您的 ECS 实例"
+    description="通过 RDP/SSH 连接到您的 ECS 实例"
+  />
+  <LinkCard
+    title="开机关机重启"
+    href="/ecs/control/basic/"
+    description="管理实例的电源状态和运行控制"
+  />
+  <LinkCard
+    title="升降配置"
+    href="/ecs/control/upgrade/"
+    description="动态调整 CPU、内存、存储和带宽"
+  />
+  <LinkCard
+    title="实例退款"
+    href="/ecs/control/refund/"
+    description="了解退款规则和费用计算方式"
   />
 </CardGrid>
 
